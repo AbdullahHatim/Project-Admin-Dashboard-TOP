@@ -3,3 +3,35 @@
 html {
   font-family: system-ui, sans-serif;
 }
+
+body {
+  height: 100svh;
+}
+div {
+  background: lightseagreen;
+  border: 3px pink dotted;
+  &:nth-child(even) {
+    background: lightblue;
+  }
+}
+
+#container {
+  display: grid;
+  height: 100%;
+  grid-template: 1fr 4fr / 1fr 4fr;
+  grid-template-areas:
+    "side header"
+    "side main";
+}
+
+#header {
+  grid-area: header;
+}
+
+#side {
+  grid-area: side;
+}
+
+#main {
+  grid-area: main;
+}
